@@ -1,21 +1,16 @@
 name: CI
-
-on:
-  push:  
-
+'on':
+  push: null
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-
-    - name: Install dependencies
-      run: |
-        ls -ltra
-        ls -ltra ../
-        ls -ltra ../../
-        pip install -r ../../requirements.txt
+      - uses: actions/checkout@v4 #added
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          ls -ltra
+          pip install -r requirements.txt
