@@ -15,4 +15,5 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r ../requirements.txt
+        ls -ltra ../../
+        pip install -r ../../requirements.txt
